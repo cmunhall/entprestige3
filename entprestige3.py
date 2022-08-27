@@ -9,8 +9,7 @@ import streamlit.components.v1 as components
 
 st.title("Network Visualization of Top 10 ENT Programs")
 
-
-data = pd.read_csv('~/Desktop/prestigedata.csv')
+data = pd.read_csv('~/Users/coopermunhall/Desktop/prestigedata.csv')
 
 sources = data['source']
 targets = data['target']
