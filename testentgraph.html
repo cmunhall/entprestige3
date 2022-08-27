@@ -1,0 +1,121 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vis-network@latest/styles/vis-network.css" type="text/css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vis-network@latest/dist/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 80%;
+            height: 80%;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+        #config {
+            float: left;
+            width: 400px;
+            height: 600px;
+        }
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<div id = "config"></div>
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"id": "MEEI", "label": "MEEI", "shape": "dot", "title": "MEEI", "value": 135.0}, {"id": "JHU", "label": "JHU", "shape": "dot", "title": "JHU", "value": 49.0}, {"id": "Michigan", "label": "Michigan", "shape": "dot", "title": "Michigan", "value": 40.0}, {"id": "Vanderbilt", "label": "Vanderbilt", "shape": "dot", "title": "Vanderbilt", "value": 43.0}, {"id": "MUSC", "label": "MUSC", "shape": "dot", "title": "MUSC", "value": 19.0}, {"id": "Stanford", "label": "Stanford", "shape": "dot", "title": "Stanford", "value": 44.0}, {"id": "UCSF", "label": "UCSF", "shape": "dot", "title": "UCSF", "value": 36.0}, {"id": "Ohio State", "label": "Ohio State", "shape": "dot", "title": "Ohio State", "value": 25.0}, {"id": "Iowa", "label": "Iowa", "shape": "dot", "title": "Iowa", "value": 18.0}, {"id": "Penn", "label": "Penn", "shape": "dot", "title": "Penn", "value": 28.0}]);
+        edges = new vis.DataSet([{"from": "MEEI", "to": "MEEI", "value": 44}, {"from": "JHU", "to": "MEEI", "value": 3}, {"from": "Michigan", "to": "MEEI", "value": 1}, {"from": "Vanderbilt", "to": "MEEI", "value": 0}, {"from": "MUSC", "to": "MEEI", "value": 1}, {"from": "Stanford", "to": "MEEI", "value": 1}, {"from": "UCSF", "to": "MEEI", "value": 4}, {"from": "Ohio State", "to": "MEEI", "value": 0}, {"from": "Iowa", "to": "MEEI", "value": 3}, {"from": "Penn", "to": "MEEI", "value": 1}, {"from": "JHU", "to": "JHU", "value": 20}, {"from": "Michigan", "to": "JHU", "value": 0}, {"from": "Vanderbilt", "to": "JHU", "value": 0}, {"from": "MUSC", "to": "JHU", "value": 0}, {"from": "Stanford", "to": "JHU", "value": 0}, {"from": "UCSF", "to": "JHU", "value": 0}, {"from": "Ohio State", "to": "JHU", "value": 0}, {"from": "Iowa", "to": "JHU", "value": 0}, {"from": "Penn", "to": "JHU", "value": 2}, {"from": "Michigan", "to": "Michigan", "value": 16}, {"from": "Vanderbilt", "to": "Michigan", "value": 0}, {"from": "MUSC", "to": "Michigan", "value": 0}, {"from": "Stanford", "to": "Michigan", "value": 1}, {"from": "UCSF", "to": "Michigan", "value": 0}, {"from": "Ohio State", "to": "Michigan", "value": 0}, {"from": "Iowa", "to": "Michigan", "value": 1}, {"from": "Penn", "to": "Michigan", "value": 1}, {"from": "Vanderbilt", "to": "Vanderbilt", "value": 9}, {"from": "MUSC", "to": "Vanderbilt", "value": 0}, {"from": "Stanford", "to": "Vanderbilt", "value": 0}, {"from": "UCSF", "to": "Vanderbilt", "value": 0}, {"from": "Ohio State", "to": "Vanderbilt", "value": 1}, {"from": "Iowa", "to": "Vanderbilt", "value": 0}, {"from": "Penn", "to": "Vanderbilt", "value": 0}, {"from": "MUSC", "to": "MUSC", "value": 2}, {"from": "Stanford", "to": "MUSC", "value": 0}, {"from": "UCSF", "to": "MUSC", "value": 0}, {"from": "Ohio State", "to": "MUSC", "value": 0}, {"from": "Iowa", "to": "MUSC", "value": 0}, {"from": "Penn", "to": "MUSC", "value": 1}, {"from": "Stanford", "to": "Stanford", "value": 9}, {"from": "UCSF", "to": "Stanford", "value": 4}, {"from": "Ohio State", "to": "Stanford", "value": 0}, {"from": "Iowa", "to": "Stanford", "value": 1}, {"from": "Penn", "to": "Stanford", "value": 1}, {"from": "UCSF", "to": "UCSF", "value": 9}, {"from": "Ohio State", "to": "UCSF", "value": 0}, {"from": "Iowa", "to": "UCSF", "value": 1}, {"from": "Penn", "to": "UCSF", "value": 0}, {"from": "Ohio State", "to": "Ohio State", "value": 9}, {"from": "Iowa", "to": "Ohio State", "value": 0}, {"from": "Penn", "to": "Ohio State", "value": 0}, {"from": "Iowa", "to": "Iowa", "value": 9}, {"from": "Penn", "to": "Iowa", "value": 0}, {"from": "Penn", "to": "Penn", "value": 7}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": true,
+        "filter": true
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+        // if this network requires displaying the configure window,
+        // put it in its div
+        options.configure["container"] = document.getElementById("config");
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
