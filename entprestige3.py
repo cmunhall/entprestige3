@@ -1,3 +1,4 @@
+from importlib.resources import path
 from optparse import Values
 from pyvis.network import Network
 from pyvis.network import Network
@@ -7,7 +8,6 @@ import networkx as nx
 import streamlit as st
 import streamlit.components.v1 as components
 
-open('/Users/coopermunhall/Desktop/entprestige3-1/prestigedata.csv')
 data = pd.read_csv('/Users/coopermunhall/Desktop/entprestige3-1/prestigedata.csv')
 
 sources = data['source']
@@ -27,7 +27,6 @@ for e in edge_data:
     net.add_node(src, src, value=asize, title=src)
     net.add_node(dst, dst, value=asize, title=dst)
     net.add_edge(src, dst, value=w)
-
 
 net.show_buttons(filter_=True)
 net.show('testentgraph.html')
