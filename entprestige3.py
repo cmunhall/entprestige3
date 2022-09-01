@@ -7,7 +7,7 @@ import networkx as nx
 import streamlit as st
 import streamlit.components.v1 as components
 
-data = pd.read_csv('/Users/coopermunhall/Desktop/prestigedata.csv')
+data = pd.read_csv('/Users/coopermunhall/Desktop/entprestige3-1/prestigedata.csv')
 
 sources = data['source']
 targets = data['target']
