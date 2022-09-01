@@ -5,8 +5,6 @@ import pandas as pd
 from pyvis.network import Network
 import entprestige3 as ep
 
-df_interact = pd.read_csv()
-
 st.title("Network Visualization of ENT Programs #1-10")
 
 st.sidebar.title('Programs #1-10 Network Graph')
