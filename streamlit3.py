@@ -1,8 +1,11 @@
 import streamlit as st
 import streamlit.components.v1 as components
 import networkx as nx
+import pandas as pd
 from pyvis.network import Network
-import entprestige3
+import entprestige3 as ep
+
+df_interact = pd.read_csv()
 
 st.title("Network Visualization of ENT Programs #1-10")
 
