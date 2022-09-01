@@ -1,5 +1,3 @@
-from importlib.resources import path
-from optparse import Values
 from pyvis.network import Network
 from pyvis.network import Network
 net = Network(height='600px', width='100%')
@@ -24,9 +22,52 @@ for e in edge_data:
     w = e[2]
     asize = e[3]
 
-    net.add_node(src, src, value=asize, title=src)
-    net.add_node(dst, dst, value=asize, title=dst)
-    net.add_edge(src, dst, value=w)
+    net.add_node(src, src, value=asize, color="#7EADE6", title=src)
+    net.add_node(dst, dst, value=asize, color="#7EADE6", title=dst)
+    net.add_edge(src, dst, color="#7EADE6", value=w)
 
-net.show_buttons(filter_=True)
+net.set_options("""
+const options = {
+  "nodes": {
+    "borderWidth": null,
+    "borderWidthSelected": null,
+    "opacity": null,
+    "font": {
+      "strokeWidth": 3
+    },
+    "size": null
+  },
+  "edges": {
+    "arrows": {
+      "to": {
+        "enabled": true,
+        "scaleFactor": 0.35
+      }
+    },
+    "color": {
+      "inherit": true
+    },
+    "selfReferenceSize": 17,
+    "selfReference": {
+      "size": 15,
+      "angle": 0.7853981633974483
+    },
+    "smooth": {
+      "forceDirection": "none"
+    }
+  },
+  "interaction": {
+    "dragNodes": false,
+    "navigationButtons": true
+  },
+  "physics": {
+    "barnesHut": {
+      "gravitationalConstant": -6400,
+      "avoidOverlap": 0.2
+    },
+    "minVelocity": 0.75
+  }
+}
+""")
+
 net.show('testentgraph.html')
