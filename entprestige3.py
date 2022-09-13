@@ -79,6 +79,4 @@ const options = {
 }
 """)
 
-Options.Layout(randomSeed=None, improvedLayout=True)
-
 net.show('testentgraph.html')

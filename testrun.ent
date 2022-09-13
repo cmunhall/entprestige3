@@ -1,0 +1,34 @@
+from pyvis.network import Network
+net = Network(height='80%', width='80%')
+import pandas as pd
+
+data = pd.read_csv('~/Desktop/prestigedata.csv')
+
+sources = data['source']
+targets = data['target']
+weights = data['weight']
+size = data['audience.size']
+label = data['label']
+
+edge_data = zip(sources, targets, weights)
+
+for e in edge_data:
+    src = e[0]
+    dst = e [1] 
+    w = e[2]
+
+    net.add_node(1, label='Harvard', size=135)
+    net.add_node(2, label='Johns Hopkins', size=49)
+    net.add_node(3, label="Michigan", size=40)
+    net.add_node(4, label="Vanderbilt", size=43)        
+    net.add_node(5, label="MUSC", size=19)
+    net.add_node(6, label="Stanford", size=44)
+    net.add_node(7, label="UCSF", size=36)
+    net.add_node(8, label="Ohio State", size=25)
+    net.add_node(9, label="Iowa", size=18)
+    net.add_node(10, label="Penn", size=28)
+
+    net.add_edge(src, dst, value=w)
+
+net.show_buttons(filter_=True)
+net.show('testentgraph.html')
