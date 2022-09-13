@@ -1,14 +1,14 @@
+from ssl import Options
+from turtle import circle
 from pyvis.network import Network
 from pyvis.network import Network
-net = Network(height='600px', width='100%')
+net = Network(height='600px', width='100%', layout=circle)
 import pandas as pd
 import networkx as nx
 import streamlit as st
 import streamlit.components.v1 as components
 
 data = pd.read_csv("https://raw.githubusercontent.com/cmunhall/entprestige3/master/prestigedata.csv")
-
-print(data)
 
 sources = data['source']
 targets = data['target']
@@ -59,17 +59,26 @@ const options = {
     }
   },
   "interaction": {
-    "dragNodes": false,
     "navigationButtons": true
   },
   "physics": {
+    "enabled": false,
     "barnesHut": {
-      "gravitationalConstant": -6400,
+      "theta": 0.45,
+      "gravitationalConstant": -6500,
+      "centralGravity": 0,
+      "springLength": 315,
+      "springConstant": 0.17,
+      "damping": 0.74,
       "avoidOverlap": 0.2
     },
-    "minVelocity": 0.75
+    "maxVelocity": 51,
+    "minVelocity": 10,
+    "timestep": 0.49
   }
 }
 """)
+
+Options.Layout(randomSeed=None, improvedLayout=True)
 
 net.show('testentgraph.html')
