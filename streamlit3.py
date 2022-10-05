@@ -3,7 +3,6 @@ import streamlit.components.v1 as components
 import networkx as nx
 import pandas as pd
 from pyvis.network import Network
-import entprestige3 as ep
 
 st.title("Network Visualization of ENT Programs #1-10")
 

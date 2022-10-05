@@ -1,12 +1,8 @@
-from ssl import Options
 from turtle import circle
 from pyvis.network import Network
 from pyvis.network import Network
 net = Network(height='600px', width='100%', layout=circle)
 import pandas as pd
-import networkx as nx
-import streamlit as st
-import streamlit.components.v1 as components
 
 data = pd.read_csv("https://raw.githubusercontent.com/cmunhall/entprestige3/master/prestigedata.csv")
 
