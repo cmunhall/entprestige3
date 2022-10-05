@@ -2,3 +2,5 @@ pyvis
 pandas
 pyvis.network
 networkx
+turtle
+tkinter
