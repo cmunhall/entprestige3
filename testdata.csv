@@ -1,0 +1,101 @@
+id,label,audience.size,,source,target,weight
+1,MEEI,135,,MEEI (n = 135),MEEI (n = 135),44
+2,JHU,49,,JHU (n = 49),MEEI (n = 135),3
+3,Michigan,40,,Michigan (n = 40),MEEI (n = 135),1
+4,Vanderbilt,43,,Vanderbilt (n = 43),MEEI (n = 135),0
+5,MUSC,19,,MUSC (n = 19),MEEI (n = 135),1
+6,Stanford,44,,Stanford (n = 44),MEEI (n = 135),1
+7,UCSF,36,,UCSF (n = 36),MEEI (n = 135),4
+8,Ohio State,25,,Ohio State (n = 25),MEEI (n = 135),0
+9,Iowa,18,,Iowa (n = 18),MEEI (n = 135),3
+10,Penn,28,,Penn (n = 28),MEEI (n = 135),1
+,,,,MEEI (n = 135),JHU (n = 49),4
+,,,,JHU (n = 49),JHU (n = 49),20
+,,,,Michigan (n = 40),JHU (n = 49),0
+,,,,Vanderbilt (n = 43),JHU (n = 49),0
+,,,,MUSC (n = 19),JHU (n = 49),0
+,,,,Stanford (n = 44),JHU (n = 49),0
+,,,,UCSF (n = 36),JHU (n = 49),0
+,,,,Ohio State (n = 25),JHU (n = 49),0
+,,,,Iowa (n = 18),JHU (n = 49),0
+,,,,Penn (n = 28),JHU (n = 49),2
+,,,,MEEI (n = 135),Michigan (n = 40),2
+,,,,JHU (n = 49),Michigan (n = 40),1
+,,,,Michigan (n = 40),Michigan (n = 40),16
+,,,,Vanderbilt (n = 43),Michigan (n = 40),0
+,,,,MUSC (n = 19),Michigan (n = 40),0
+,,,,Stanford (n = 44),Michigan (n = 40),1
+,,,,UCSF (n = 36),Michigan (n = 40),0
+,,,,Ohio State (n = 25),Michigan (n = 40),0
+,,,,Iowa (n = 18),Michigan (n = 40),1
+,,,,Penn (n = 28),Michigan (n = 40),1
+,,,,MEEI (n = 135),Vanderbilt (n = 43),1
+,,,,JHU (n = 49),Vanderbilt (n = 43),2
+,,,,Michigan (n = 40),Vanderbilt (n = 43),1
+,,,,Vanderbilt (n = 43),Vanderbilt (n = 43),9
+,,,,MUSC (n = 19),Vanderbilt (n = 43),0
+,,,,Stanford (n = 44),Vanderbilt (n = 43),0
+,,,,UCSF (n = 36),Vanderbilt (n = 43),0
+,,,,Ohio State (n = 25),Vanderbilt (n = 43),1
+,,,,Iowa (n = 18),Vanderbilt (n = 43),0
+,,,,Penn (n = 28),Vanderbilt (n = 43),0
+,,,,MEEI (n = 135),MUSC (n = 19),0
+,,,,JHU (n = 49),MUSC (n = 19),0
+,,,,Michigan (n = 40),MUSC (n = 19),0
+,,,,Vanderbilt (n = 43),MUSC (n = 19),1
+,,,,MUSC (n = 19),MUSC (n = 19),2
+,,,,Stanford (n = 44),MUSC (n = 19),0
+,,,,UCSF (n = 36),MUSC (n = 19),0
+,,,,Ohio State (n = 25),MUSC (n = 19),0
+,,,,Iowa (n = 18),MUSC (n = 19),0
+,,,,Penn (n = 28),MUSC (n = 19),1
+,,,,MEEI (n = 135),Stanford (n = 44),1
+,,,,JHU (n = 49),Stanford (n = 44),0
+,,,,Michigan (n = 40),Stanford (n = 44),2
+,,,,Vanderbilt (n = 43),Stanford (n = 44),0
+,,,,MUSC (n = 19),Stanford (n = 44),0
+,,,,Stanford (n = 44),Stanford (n = 44),9
+,,,,UCSF (n = 36),Stanford (n = 44),4
+,,,,Ohio State (n = 25),Stanford (n = 44),0
+,,,,Iowa (n = 18),Stanford (n = 44),1
+,,,,Penn (n = 28),Stanford (n = 44),1
+,,,,MEEI (n = 135),UCSF (n = 36),1
+,,,,JHU (n = 49),UCSF (n = 36),2
+,,,,Michigan (n = 40),UCSF (n = 36),1
+,,,,Vanderbilt (n = 43),UCSF (n = 36),0
+,,,,MUSC (n = 19),UCSF (n = 36),0
+,,,,Stanford (n = 44),UCSF (n = 36),3
+,,,,UCSF (n = 36),UCSF (n = 36),9
+,,,,Ohio State (n = 25),UCSF (n = 36),0
+,,,,Iowa (n = 18),UCSF (n = 36),1
+,,,,Penn (n = 28),UCSF (n = 36),0
+,,,,MEEI (n = 135),Ohio State (n = 25),1
+,,,,JHU (n = 49),Ohio State (n = 25),1
+,,,,Michigan (n = 40),Ohio State (n = 25),4
+,,,,Vanderbilt (n = 43),Ohio State (n = 25),0
+,,,,MUSC (n = 19),Ohio State (n = 25),0
+,,,,Stanford (n = 44),Ohio State (n = 25),0
+,,,,UCSF (n = 36),Ohio State (n = 25),0
+,,,,Ohio State (n = 25),Ohio State (n = 25),9
+,,,,Iowa (n = 18),Ohio State (n = 25),0
+,,,,Penn (n = 28),Ohio State (n = 25),0
+,,,,MEEI (n = 135),Iowa (n = 18),0
+,,,,JHU (n = 49),Iowa (n = 18),0
+,,,,Michigan (n = 40),Iowa (n = 18),1
+,,,,Vanderbilt (n = 43),Iowa (n = 18),0
+,,,,MUSC (n = 19),Iowa (n = 18),0
+,,,,Stanford (n = 44),Iowa (n = 18),0
+,,,,UCSF (n = 36),Iowa (n = 18),0
+,,,,Ohio State (n = 25),Iowa (n = 18),0
+,,,,Iowa (n = 18),Iowa (n = 18),9
+,,,,Penn (n = 28),Iowa (n = 18),0
+,,,,MEEI (n = 135),Penn (n = 28),0
+,,,,JHU (n = 49),Penn (n = 28),2
+,,,,Michigan (n = 40),Penn (n = 28),0
+,,,,Vanderbilt (n = 43),Penn (n = 28),0
+,,,,MUSC (n = 19),Penn (n = 28),0
+,,,,Stanford (n = 44),Penn (n = 28),0
+,,,,UCSF (n = 36),Penn (n = 28),0
+,,,,Ohio State (n = 25),Penn (n = 28),0
+,,,,Iowa (n = 18),Penn (n = 28),1
+,,,,Penn (n = 28),Penn (n = 28),7

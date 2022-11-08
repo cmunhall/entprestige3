@@ -1,50 +1,50 @@
 ﻿id,label,audience.size,,source,target,weight
-1,MEEI (135),135,,MEEI (135),MEEI (135),44
-2,JHU (49),49,,JHU (49),MEEI (135),3
-3,Michigan (40),40,,Michigan (40),MEEI (135),1
-4,Vanderbilt (43),43,,MUSC (19),MEEI (135),1
-5,MUSC (19),19,,Stanford (44),MEEI (135),1
-6,Stanford (44),44,,UCSF (36),MEEI (135),4
-7,UCSF (36),36,,Iowa (18),MEEI (135),3
-8,Ohio State (25),25,,Penn (28),MEEI (135),1
-9,Iowa (18),18,,MEEI (135),JHU (49),4
-10,Penn (28),28,,JHU (49),JHU (49),20
-,,,,Penn (28),JHU (49),2
-,,,,MEEI (135),Michigan (40),2
-,,,,JHU (49),Michigan (40),1
-,,,,Michigan (40),Michigan (40),16
-,,,,Stanford (44),Michigan (40),1
-,,,,Iowa (18),Michigan (40),1
-,,,,Penn (28),Michigan (40),1
-,,,,MEEI (135),Vanderbilt (43),1
-,,,,JHU (49),Vanderbilt (43),2
-,,,,Michigan (40),Vanderbilt (43),1
-,,,,Vanderbilt (43),Vanderbilt (43),9
-,,,,Ohio State (25),Vanderbilt (43),1
-,,,,Vanderbilt (43),MUSC (19),1
-,,,,MUSC (19),MUSC (19),2
-,,,,Penn (28),MUSC (19),1
-,,,,MEEI (135),Stanford (44),1
-,,,,Michigan (40),Stanford (44),2
-,,,,Stanford (44),Stanford (44),9
-,,,,UCSF (36),Stanford (44),4
-,,,,Iowa (18),Stanford (44),1
-,,,,Penn (28),Stanford (44),1
-,,,,MEEI (135),UCSF (36),1
-,,,,JHU (49),UCSF (36),2
-,,,,Michigan (40),UCSF (36),1
-,,,,Stanford (44),UCSF (36),3
-,,,,UCSF (36),UCSF (36),9
-,,,,Iowa (18),UCSF (36),1
-,,,,MEEI (135),Ohio State (25),1
-,,,,JHU (49),Ohio State (25),1
-,,,,Michigan (40),Ohio State (25),4
-,,,,Ohio State (25),Ohio State (25),9
-,,,,Michigan (40),Iowa (18),1
-,,,,Iowa (18),Iowa (18),9
-,,,,JHU (49),Penn (28),2
-,,,,Iowa (18),Penn (28),1
-,,,,Penn (28),Penn (28),7
+1,"""MEEI (135)""",135,,"""MEEI (135)""","""MEEI (135)""",44
+2,"""JHU (49)""",49,,"""JHU (49)""","""MEEI (135)""",3
+3,"""Michigan (40)""",40,,"""Michigan (40)""","""MEEI (135)""",1
+4,"""Vanderbilt (43)""",43,,"""MUSC (19)""","""MEEI (135)""",1
+5,"""MUSC (19)""",19,,"""Stanford (44)""","""MEEI (135)""",1
+6,"""Stanford (44)""",44,,"""UCSF (36)""","""MEEI (135)""",4
+7,"""UCSF (36)""",36,,"""Iowa (18)""","""MEEI (135)""",3
+8,"""Ohio State (25)""",25,,"""Penn (28)""","""MEEI (135)""",1
+9,"""Iowa (18)""",18,,"""MEEI (135)""","""JHU (49)""",4
+10,"""Penn (28)""",28,,"""JHU (49)""","""JHU (49)""",20
+,,,,"""Penn (28)""","""JHU (49)""",2
+,,,,"""MEEI (135)""","""Michigan (40)""",2
+,,,,"""JHU (49)""","""Michigan (40)""",1
+,,,,"""Michigan (40)""","""Michigan (40)""",16
+,,,,"""Stanford (44)""","""Michigan (40)""",1
+,,,,"""Iowa (18)""","""Michigan (40)""",1
+,,,,"""Penn (28)""","""Michigan (40)""",1
+,,,,"""MEEI (135)""","""Vanderbilt (43)""",1
+,,,,"""JHU (49)""","""Vanderbilt (43)""",2
+,,,,"""Michigan (40)""","""Vanderbilt (43)""",1
+,,,,"""Vanderbilt (43)""","""Vanderbilt (43)""",9
+,,,,"""Ohio State (25)""","""Vanderbilt (43)""",1
+,,,,"""Vanderbilt (43)""","""MUSC (19)""",1
+,,,,"""MUSC (19)""","""MUSC (19)""",2
+,,,,"""Penn (28)""","""MUSC (19)""",1
+,,,,"""MEEI (135)""","""Stanford (44)""",1
+,,,,"""Michigan (40)""","""Stanford (44)""",2
+,,,,"""Stanford (44)""","""Stanford (44)""",9
+,,,,"""UCSF (36)""","""Stanford (44)""",4
+,,,,"""Iowa (18)""","""Stanford (44)""",1
+,,,,"""Penn (28)""","""Stanford (44)""",1
+,,,,"""MEEI (135)""","""UCSF (36)""",1
+,,,,"""JHU (49)""","""UCSF (36)""",2
+,,,,"""Michigan (40)""","""UCSF (36)""",1
+,,,,"""Stanford (44)""","""UCSF (36)""",3
+,,,,"""UCSF (36)""","""UCSF (36)""",9
+,,,,"""Iowa (18)""","""UCSF (36)""",1
+,,,,"""MEEI (135)""","""Ohio State (25)""",1
+,,,,"""JHU (49)""","""Ohio State (25)""",1
+,,,,"""Michigan (40)""","""Ohio State (25)""",4
+,,,,"""Ohio State (25)""","""Ohio State (25)""",9
+,,,,"""Michigan (40)""","""Iowa (18)""",1
+,,,,"""Iowa (18)""","""Iowa (18)""",9
+,,,,"""JHU (49)""","""Penn (28)""",2
+,,,,"""Iowa (18)""","""Penn (28)""",1
+,,,,"""Penn (28)""","""Penn (28)""",7
 ,,,,,,
 ,,,,,,
 ,,,,,,

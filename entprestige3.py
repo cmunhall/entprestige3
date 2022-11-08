@@ -20,8 +20,8 @@ for e in edge_data:
     w = e[2]
     asize = e[3]
 
-    net.add_node(src, src, value=asize, color="#7EADE6", title=src)
-    net.add_node(dst, dst, value=asize, color="#7EADE6", title=dst)
+    net.add_node(src, src, value=asize, color="#7EADE6", title=label)
+    net.add_node(dst, dst, value=asize, color="#7EADE6", title=label)
     net.add_edge(src, dst, color="#7EADE6", value=w, title=w)
 
 net.set_options("""
