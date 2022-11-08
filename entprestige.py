@@ -3,7 +3,7 @@ from pyvis.physics import Physics
 net = Network(height='750px', width='80%')
 import pandas as pd
 
-data = pd.read_csv('~/Desktop/prestigedata.csv')
+data = pd.read_csv('~/Desktop/prestigedata_clean.csv')
 
 
 sources = data['source']
