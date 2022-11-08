@@ -1,0 +1,54 @@
+﻿id,label,audience.size,,source,target,weight
+1,Harvard,135,,Harvard,Harvard,44
+2,Johns Hopkins,49,,Johns Hopkins,Harvard,3
+3,Michigan,40,,Michigan,Harvard,1
+4,Vanderbilt,43,,MUSC,Harvard,1
+5,MUSC,19,,Stanford,Harvard,1
+6,Stanford,44,,UCSF,Harvard,4
+7,UCSF,36,,Iowa,Harvard,3
+8,Ohio State,25,,Penn,Harvard,1
+9,Iowa,18,,Harvard,Johns Hopkins,4
+10,Penn,28,,Johns Hopkins,Johns Hopkins,20
+,,,,Penn,Johns Hopkins,2
+,,,,Harvard,Michigan,2
+,,,,Johns Hopkins,Michigan,1
+,,,,Michigan,Michigan,16
+,,,,MUSC,Johns Hopkins,0
+,,,,Stanford,Johns Hopkins,0
+,,,,UCSF,Johns Hopkins,0
+,,,,Ohio State,Johns Hopkins,0
+,,,,Iowa,Johns Hopkins,0
+,,,,Stanford,Michigan,1
+,,,,Iowa,Michigan,1
+,,,,Penn,Michigan,1
+,,,,Harvard,Vanderbilt,1
+,,,,Johns Hopkins,Vanderbilt,2
+,,,,Michigan,Vanderbilt,1
+,,,,Vanderbilt,Vanderbilt,9
+,,,,UCSF,Michigan,0
+,,,,Ohio State,Michigan,0
+,,,,Ohio State,Vanderbilt,1
+,,,,Vanderbilt,MUSC,1
+,,,,MUSC,MUSC,2
+,,,,Penn,MUSC,1
+,,,,Harvard,Stanford,1
+,,,,Michigan,Stanford,2
+,,,,Stanford,Stanford,9
+,,,,UCSF,Stanford,4
+,,,,Iowa,Stanford,1
+,,,,Penn,Stanford,1
+,,,,Harvard,UCSF,1
+,,,,Johns Hopkins,UCSF,2
+,,,,Michigan,UCSF,1
+,,,,Stanford,UCSF,3
+,,,,UCSF,UCSF,9
+,,,,Iowa,UCSF,1
+,,,,Harvard,Ohio State,1
+,,,,Johns Hopkins,Ohio State,1
+,,,,Michigan,Ohio State,4
+,,,,Ohio State,Ohio State,9
+,,,,Michigan,Iowa,1
+,,,,Iowa,Iowa,9
+,,,,Johns Hopkins,Penn,2
+,,,,Iowa,Penn,1
+,,,,Penn,Penn,7
