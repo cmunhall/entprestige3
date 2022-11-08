@@ -1,0 +1,101 @@
+﻿id,label,audience.size,,source,target,weight
+1,MEEI,135,,MEEI,MEEI,44
+2,JHU,49,,JHU,MEEI,3
+3,Michigan,40,,Michigan,MEEI,1
+4,Vanderbilt,43,,Vanderbilt,MEEI,0
+5,MUSC,19,,MUSC,MEEI,1
+6,Stanford,44,,Stanford,MEEI,1
+7,UCSF,36,,UCSF,MEEI,4
+8,Ohio State,25,,Ohio State,MEEI,0
+9,Iowa,18,,Iowa,MEEI,3
+10,Penn,28,,Penn,MEEI,1
+,,,,MEEI,JHU,4
+,,,,JHU,JHU,20
+,,,,Michigan,JHU,0
+,,,,Vanderbilt,JHU,0
+,,,,MUSC,JHU,0
+,,,,Stanford,JHU,0
+,,,,UCSF,JHU,0
+,,,,Ohio State,JHU,0
+,,,,Iowa,JHU,0
+,,,,Penn,JHU,2
+,,,,MEEI,Michigan,2
+,,,,JHU,Michigan,1
+,,,,Michigan,Michigan,16
+,,,,Vanderbilt,Michigan,0
+,,,,MUSC,Michigan,0
+,,,,Stanford,Michigan,1
+,,,,UCSF,Michigan,0
+,,,,Ohio State,Michigan,0
+,,,,Iowa,Michigan,1
+,,,,Penn,Michigan,1
+,,,,MEEI,Vanderbilt,1
+,,,,JHU,Vanderbilt,2
+,,,,Michigan,Vanderbilt,1
+,,,,Vanderbilt,Vanderbilt,9
+,,,,MUSC,Vanderbilt,0
+,,,,Stanford,Vanderbilt,0
+,,,,UCSF,Vanderbilt,0
+,,,,Ohio State,Vanderbilt,1
+,,,,Iowa,Vanderbilt,0
+,,,,Penn,Vanderbilt,0
+,,,,MEEI,MUSC,0
+,,,,JHU,MUSC,0
+,,,,Michigan,MUSC,0
+,,,,Vanderbilt,MUSC,1
+,,,,MUSC,MUSC,2
+,,,,Stanford,MUSC,0
+,,,,UCSF,MUSC,0
+,,,,Ohio State,MUSC,0
+,,,,Iowa,MUSC,0
+,,,,Penn,MUSC,1
+,,,,MEEI,Stanford,1
+,,,,JHU,Stanford,0
+,,,,Michigan,Stanford,2
+,,,,Vanderbilt,Stanford,0
+,,,,MUSC,Stanford,0
+,,,,Stanford,Stanford,9
+,,,,UCSF,Stanford,4
+,,,,Ohio State,Stanford,0
+,,,,Iowa,Stanford,1
+,,,,Penn,Stanford,1
+,,,,MEEI,UCSF,1
+,,,,JHU,UCSF,2
+,,,,Michigan,UCSF,1
+,,,,Vanderbilt,UCSF,0
+,,,,MUSC,UCSF,0
+,,,,Stanford,UCSF,3
+,,,,UCSF,UCSF,9
+,,,,Ohio State,UCSF,0
+,,,,Iowa,UCSF,1
+,,,,Penn,UCSF,0
+,,,,MEEI,Ohio State,1
+,,,,JHU,Ohio State,1
+,,,,Michigan,Ohio State,4
+,,,,Vanderbilt,Ohio State,0
+,,,,MUSC,Ohio State,0
+,,,,Stanford,Ohio State,0
+,,,,UCSF,Ohio State,0
+,,,,Ohio State,Ohio State,9
+,,,,Iowa,Ohio State,0
+,,,,Penn,Ohio State,0
+,,,,MEEI,Iowa,0
+,,,,JHU,Iowa,0
+,,,,Michigan,Iowa,1
+,,,,Vanderbilt,Iowa,0
+,,,,MUSC,Iowa,0
+,,,,Stanford,Iowa,0
+,,,,UCSF,Iowa,0
+,,,,Ohio State,Iowa,0
+,,,,Iowa,Iowa,9
+,,,,Penn,Iowa,0
+,,,,MEEI,Penn,0
+,,,,JHU,Penn,2
+,,,,Michigan,Penn,0
+,,,,Vanderbilt,Penn,0
+,,,,MUSC,Penn,0
+,,,,Stanford,Penn,0
+,,,,UCSF,Penn,0
+,,,,Ohio State,Penn,0
+,,,,Iowa,Penn,1
+,,,,Penn,Penn,7
