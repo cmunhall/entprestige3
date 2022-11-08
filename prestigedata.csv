@@ -2,15 +2,13 @@ id,label,audience.size,,source,target,weight
 1,MEEI (n = 135),135,,MEEI (n = 135),MEEI (n = 135),44
 2,JHU (n = 49),49,,JHU (n = 49),MEEI (n = 135),3
 3,Michigan (n = 40),40,,Michigan (n = 40),MEEI (n = 135),1
-4,Vanderbilt (n = 43),43,,,,
-5,MUSC (n = 19),19,,MUSC (n = 19),MEEI (n = 135),1
-6,Stanford (n = 44),44,,Stanford (n = 44),MEEI (n = 135),1
-7,UCSF (n = 36),36,,UCSF (n = 36),MEEI (n = 135),4
-8,Ohio State (n = 25),25,,,,
-9,Iowa (n = 18),18,,Iowa (n = 18),MEEI (n = 135),3
-10,Penn (n = 28),28,,Penn (n = 28),MEEI (n = 135),1
-,,,,MEEI (n = 135),JHU (n = 49),4
-,,,,JHU (n = 49),JHU (n = 49),20
+4,Vanderbilt (n = 43),43,,MUSC (n = 19),MEEI (n = 135),1
+5,MUSC (n = 19),19,,Stanford (n = 44),MEEI (n = 135),1
+6,Stanford (n = 44),44,,UCSF (n = 36),MEEI (n = 135),4
+7,UCSF (n = 36),36,,Iowa (n = 18),MEEI (n = 135),3
+8,Ohio State (n = 25),25,,Penn (n = 28),MEEI (n = 135),1
+9,Iowa (n = 18),18,,MEEI (n = 135),JHU (n = 49),4
+10,Penn (n = 28),28,,JHU (n = 49),JHU (n = 49),20
 ,,,,Penn (n = 28),JHU (n = 49),2
 ,,,,MEEI (n = 135),Michigan (n = 40),2
 ,,,,JHU (n = 49),Michigan (n = 40),1
