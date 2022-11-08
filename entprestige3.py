@@ -4,7 +4,7 @@ from pyvis.network import Network
 net = Network(height='600px', width='100%', layout=circle)
 import pandas as pd
 
-data = pd.read_csv("https://github.com/cmunhall/entprestige3/blob/master/prestigedata_clean.csv")
+data = pd.read_csv("")
 
 sources = data['source']
 targets = data['target']
