@@ -1,32 +1,15 @@
-from pyvis.network import Network
-from pyvis.network import Network
-net = Network(height='80%', width='80%')
-import pandas as pd
-import networkx as nx
 import streamlit as st
 import streamlit.components.v1 as components
+import networkx as nx
+import pandas as pd
+from pyvis.network import Network
 
-st.title("Network Visualization of Top 10 ENT Programs")
+st.title("Network Visualization of ENT Programs #1-10")
 
-data = pd.read_csv('~/Desktop/prestigedata.csv')
+st.sidebar.title('Programs #1-10 Network Graph')
+option=st.sidebar.selectbox('select graph',('Programs #1-10 Network Graph',"None"))
 
-sources = data['source']
-targets = data['target']
-weights = data['weight']
-size = data['audience.size']
-label = data['label']
-
-edge_data = zip(sources, targets, weights)
-
-for e in edge_data:
-    src = e[0]
-    dst = e [1] 
-    w = e[2]
-
-    net.add_node(src, src, title=src)
-    net.add_node(dst, dst, title=dst)
-    net.add_edge(src, dst, value=w)
-
-
-net.show_buttons(filter_=True)
-net.show('testentgraph.html')
+if option=='Programs #1-10 Network Graph':
+  HtmlFile = open("fakegraph.html", 'r', encoding='utf-8')
+  source_code = HtmlFile.read() 
+  components.html(source_code, height = 1000,width=800)
