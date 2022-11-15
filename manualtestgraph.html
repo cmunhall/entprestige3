@@ -1,0 +1,80 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vis-network@latest/styles/vis-network.css" type="text/css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vis-network@latest/dist/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100%;
+            height: 650px;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"id": 0, "label": 0, "shape": "dot", "size": 10}, {"id": 1, "label": 1, "shape": "dot", "size": 10}]);
+        edges = new vis.DataSet([{"arrows": "to", "from": 0, "label": 1, "to": 1, "weight": 1}, {"arrows": "to", "from": 0, "label": 1, "to": 1, "weight": 1}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {"nodes": {"borderWidth": null, "borderWidthSelected": null, "opacity": null, "font": {"strokeWidth": 3}, "size": null}, "edges": {"arrows": {"to": {"enabled": true, "scaleFactor": 0.35}}, "color": {"inherit": true}, "selfReferenceSize": 17, "selfReference": {"size": 15, "angle": 0.7853981633974483}, "smooth": {"forceDirection": "none"}}, "interaction": {"navigationButtons": true}, "physics": {"enabled": false, "barnesHut": {"theta": 0.45, "gravitationalConstant": -6500, "centralGravity": 0, "springLength": 315, "springConstant": 0.17, "damping": 0.74, "avoidOverlap": 0.2}, "maxVelocity": 51, "minVelocity": 10, "timestep": 0.49}};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

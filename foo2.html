@@ -1,0 +1,125 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vis-network@latest/styles/vis-network.css" type="text/css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vis-network@latest/dist/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100%;
+            height: 600px;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+        #config {
+            float: left;
+            width: 400px;
+            height: 600px;
+        }
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<div id = "config"></div>
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"id": "MEEI (n = 135)", "label": "MEEI (n = 135)", "shape": "dot", "size": 135}, {"id": "JHU (n = 49)", "label": "JHU (n = 49)", "shape": "dot", "size": 49}, {"id": "Michigan (n = 40)", "label": "Michigan (n = 40)", "shape": "dot", "size": 40}, {"id": "Vanderbilt (n = 43)", "label": "Vanderbilt (n = 43)", "shape": "dot", "size": 43}, {"id": "Stanford (n = 44)", "label": "Stanford (n = 44)", "shape": "dot", "size": 44}, {"id": "UCSF (n = 36)", "label": "UCSF (n = 36)", "shape": "dot", "size": 36}, {"id": "Ohio State (n = 25)", "label": "Ohio State (n = 25)", "shape": "dot", "size": 25}, {"id": "Penn (n = 28)", "label": "Penn (n = 28)", "shape": "dot", "size": 28}, {"id": "Iowa (n = 18)", "label": "Iowa (n = 18)", "shape": "dot", "size": 18}, {"id": "MUSC (n = 19)", "label": "MUSC (n = 19)", "shape": "dot", "size": 19}]);
+        edges = new vis.DataSet([{"arrows": "to", "from": "MEEI (n = 135)", "label": 1, "title": "44", "to": "MEEI (n = 135)", "value": 44, "weight": 1}, {"arrows": "to", "from": "MEEI (n = 135)", "label": 1, "title": "4", "to": "JHU (n = 49)", "value": 4, "weight": 1}, {"arrows": "to", "from": "MEEI (n = 135)", "label": 1, "title": "2", "to": "Michigan (n = 40)", "value": 2, "weight": 1}, {"arrows": "to", "from": "MEEI (n = 135)", "label": 1, "title": "1", "to": "Vanderbilt (n = 43)", "value": 1, "weight": 1}, {"arrows": "to", "from": "MEEI (n = 135)", "label": 1, "title": "1", "to": "Stanford (n = 44)", "value": 1, "weight": 1}, {"arrows": "to", "from": "MEEI (n = 135)", "label": 1, "title": "1", "to": "UCSF (n = 36)", "value": 1, "weight": 1}, {"arrows": "to", "from": "MEEI (n = 135)", "label": 1, "title": "1", "to": "Ohio State (n = 25)", "value": 1, "weight": 1}, {"arrows": "to", "from": "JHU (n = 49)", "label": 1, "title": "3", "to": "MEEI (n = 135)", "value": 3, "weight": 1}, {"arrows": "to", "from": "JHU (n = 49)", "label": 1, "title": "20", "to": "JHU (n = 49)", "value": 20, "weight": 1}, {"arrows": "to", "from": "JHU (n = 49)", "label": 1, "title": "1", "to": "Michigan (n = 40)", "value": 1, "weight": 1}, {"arrows": "to", "from": "JHU (n = 49)", "label": 1, "title": "2", "to": "Vanderbilt (n = 43)", "value": 2, "weight": 1}, {"arrows": "to", "from": "JHU (n = 49)", "label": 1, "title": "2", "to": "UCSF (n = 36)", "value": 2, "weight": 1}, {"arrows": "to", "from": "JHU (n = 49)", "label": 1, "title": "1", "to": "Ohio State (n = 25)", "value": 1, "weight": 1}, {"arrows": "to", "from": "JHU (n = 49)", "label": 1, "title": "2", "to": "Penn (n = 28)", "value": 2, "weight": 1}, {"arrows": "to", "from": "Michigan (n = 40)", "label": 1, "title": "1", "to": "MEEI (n = 135)", "value": 1, "weight": 1}, {"arrows": "to", "from": "Michigan (n = 40)", "label": 1, "title": "16", "to": "Michigan (n = 40)", "value": 16, "weight": 1}, {"arrows": "to", "from": "Michigan (n = 40)", "label": 1, "title": "1", "to": "Vanderbilt (n = 43)", "value": 1, "weight": 1}, {"arrows": "to", "from": "Michigan (n = 40)", "label": 1, "title": "2", "to": "Stanford (n = 44)", "value": 2, "weight": 1}, {"arrows": "to", "from": "Michigan (n = 40)", "label": 1, "title": "1", "to": "UCSF (n = 36)", "value": 1, "weight": 1}, {"arrows": "to", "from": "Michigan (n = 40)", "label": 1, "title": "4", "to": "Ohio State (n = 25)", "value": 4, "weight": 1}, {"arrows": "to", "from": "Michigan (n = 40)", "label": 1, "title": "1", "to": "Iowa (n = 18)", "value": 1, "weight": 1}, {"arrows": "to", "from": "Vanderbilt (n = 43)", "label": 1, "title": "9", "to": "Vanderbilt (n = 43)", "value": 9, "weight": 1}, {"arrows": "to", "from": "Vanderbilt (n = 43)", "label": 1, "title": "1", "to": "MUSC (n = 19)", "value": 1, "weight": 1}, {"arrows": "to", "from": "MUSC (n = 19)", "label": 1, "title": "1", "to": "MEEI (n = 135)", "value": 1, "weight": 1}, {"arrows": "to", "from": "MUSC (n = 19)", "label": 1, "title": "2", "to": "MUSC (n = 19)", "value": 2, "weight": 1}, {"arrows": "to", "from": "Stanford (n = 44)", "label": 1, "title": "1", "to": "MEEI (n = 135)", "value": 1, "weight": 1}, {"arrows": "to", "from": "Stanford (n = 44)", "label": 1, "title": "1", "to": "Michigan (n = 40)", "value": 1, "weight": 1}, {"arrows": "to", "from": "Stanford (n = 44)", "label": 1, "title": "9", "to": "Stanford (n = 44)", "value": 9, "weight": 1}, {"arrows": "to", "from": "Stanford (n = 44)", "label": 1, "title": "3", "to": "UCSF (n = 36)", "value": 3, "weight": 1}, {"arrows": "to", "from": "UCSF (n = 36)", "label": 1, "title": "4", "to": "MEEI (n = 135)", "value": 4, "weight": 1}, {"arrows": "to", "from": "UCSF (n = 36)", "label": 1, "title": "4", "to": "Stanford (n = 44)", "value": 4, "weight": 1}, {"arrows": "to", "from": "UCSF (n = 36)", "label": 1, "title": "9", "to": "UCSF (n = 36)", "value": 9, "weight": 1}, {"arrows": "to", "from": "Ohio State (n = 25)", "label": 1, "title": "1", "to": "Vanderbilt (n = 43)", "value": 1, "weight": 1}, {"arrows": "to", "from": "Ohio State (n = 25)", "label": 1, "title": "9", "to": "Ohio State (n = 25)", "value": 9, "weight": 1}, {"arrows": "to", "from": "Iowa (n = 18)", "label": 1, "title": "3", "to": "MEEI (n = 135)", "value": 3, "weight": 1}, {"arrows": "to", "from": "Iowa (n = 18)", "label": 1, "title": "1", "to": "Michigan (n = 40)", "value": 1, "weight": 1}, {"arrows": "to", "from": "Iowa (n = 18)", "label": 1, "title": "1", "to": "Stanford (n = 44)", "value": 1, "weight": 1}, {"arrows": "to", "from": "Iowa (n = 18)", "label": 1, "title": "1", "to": "UCSF (n = 36)", "value": 1, "weight": 1}, {"arrows": "to", "from": "Iowa (n = 18)", "label": 1, "title": "9", "to": "Iowa (n = 18)", "value": 9, "weight": 1}, {"arrows": "to", "from": "Iowa (n = 18)", "label": 1, "title": "1", "to": "Penn (n = 28)", "value": 1, "weight": 1}, {"arrows": "to", "from": "Penn (n = 28)", "label": 1, "title": "1", "to": "MEEI (n = 135)", "value": 1, "weight": 1}, {"arrows": "to", "from": "Penn (n = 28)", "label": 1, "title": "2", "to": "JHU (n = 49)", "value": 2, "weight": 1}, {"arrows": "to", "from": "Penn (n = 28)", "label": 1, "title": "1", "to": "Michigan (n = 40)", "value": 1, "weight": 1}, {"arrows": "to", "from": "Penn (n = 28)", "label": 1, "title": "1", "to": "MUSC (n = 19)", "value": 1, "weight": 1}, {"arrows": "to", "from": "Penn (n = 28)", "label": 1, "title": "1", "to": "Stanford (n = 44)", "value": 1, "weight": 1}, {"arrows": "to", "from": "Penn (n = 28)", "label": 1, "title": "7", "to": "Penn (n = 28)", "value": 7, "weight": 1}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": true,
+        "filter": [
+            "physics",
+            "nodes",
+            "edges"
+        ]
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "Dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": false,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+        // if this network requires displaying the configure window,
+        // put it in its div
+        options.configure["container"] = document.getElementById("config");
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

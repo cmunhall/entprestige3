@@ -1,6 +1,8 @@
 from pyvis.network import Network
-net = Network(height='650px', width='100%')
+net = Network(height='650px', width='100%', directed=True)
+net.set_edge_smooth("dynamic")
 import pandas as pd
+import networkx as NX
 
 data = pd.read_csv("~/Desktop/entprestige3-1/testdata.csv")
 
@@ -21,6 +23,7 @@ for e in edge_data:
     net.add_node(src, src, value = asize, color="#7EADE6", title=src)
     net.add_node(dst, dst, value = asize, color="#7EADE6", title=dst)
     net.add_edge(src, dst, color="#7EADE6", value=w, title=w)
+    net.add_edge(dst, src, color="#7EADE6", value=w, title=w)
 
 net.set_options("""
 const options = {
