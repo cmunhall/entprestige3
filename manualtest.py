@@ -60,13 +60,48 @@ g.add_edge("JHU (n = 49)"   ,   "Penn (n = 28)" , value =   2, title = "2")
 g.add_edge("Iowa (n = 18)"  ,   "Penn (n = 28)" , value =   1, title = "1")
 g.add_edge("Penn (n = 28)"  ,   "Penn (n = 28)" , value =   7, title = "7")
 
-
-
 net = Network(height='600px', width='100%', notebook=True, directed=True)
 net.from_nx(g, show_edge_weights=True)
 net.set_edge_smooth("Dynamic")
 
 net.toggle_physics(False)
-net.show_buttons(filter_=['physics', 'nodes', 'edges'])
 
+net.set_options("""
+var options = {
+    "nodes": {
+    "color": {
+    "borderWidth": null,
+    "borderWidthSelected": null,
+    "opacity": null,
+    "font": {
+      "size": 16,
+      "strokeWidth": 5
+    },
+    "size": null
+  },
+  "edges": {
+    "color": {
+      "inherit": true
+    },
+    "scaling": {
+      "min": 1,
+      "max": 20
+    },
+    "selfReferenceSize": 22,
+    "selfReference": {
+      "size": 22,
+      "angle": 0.7853981633974483,
+      "renderBehindTheNode": true
+    },
+    "smooth": {
+      "type": "Dynamic",
+      "forceDirection": "none"
+    }
+  },
+  "physics": {
+    "enabled": false,
+    "minVelocity": 0.75
+  }
+}
+""")
 net.show('foo2.html')
